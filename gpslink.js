@@ -48,7 +48,7 @@ if (hash) {
 
 // Change Map Location
 locVal.onkeyup = function(e) {
-  if (!locVal.value) {
+  if (!this.value) {
     locBtn.value = "Locate Me";
     if (e.keyCode == 13) {
       shareLocation();
@@ -74,13 +74,13 @@ locBtn.onclick = function() {
     if (e.keyCode == 13) {
       shareLocation();
     }
-  } else if (locBtn.value === "Locate Me") {
-    locBtn.value = "Loading";
+  } else if (this.value === "Locate Me") {
+    this.value = "Loading";
     locVal.value = window.location.hash.toString().replace(/#/g,'');
     shareLocation();
-  } else if (locBtn.value === "Share") {
+  } else if (this.value === "Share") {
     locVal.value = window.location.href;
-  } else if (locBtn.value === "Go To") {
+  } else if (this.value === "Go To") {
     window.location.hash = locVal.value.replace(/#/g,'');
     document.querySelector(".frame").innerHTML = "";
     var frame = document.createElement("iframe");
