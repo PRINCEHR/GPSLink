@@ -58,7 +58,10 @@ body {
 .button:hover {
   /*background: #3898ec;*/
   background: #38ec79;
-  /*border-color: #38ec79!important;*/
+  border-color: #38ec79!important;
+}
+.button:hover ~ .textbox {
+  border-color: #38ec79;
 }
 
 .centerpos {
@@ -81,13 +84,16 @@ body {
   border: 0;
 }
 #map {
-  /*height: calc(90% - 15px);*/
   width: 100%;
   height: 100%;
 }
 
+/* Variable Classes */
 .hide {
   display: none;  
+}
+.fr {
+  float: right;
 }
 
 @media (max-width: 780px) {
