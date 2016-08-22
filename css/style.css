@@ -60,7 +60,7 @@ body {
   background: #38ec79;
   border-color: #38ec79!important;
 }
-.button:hover ~ .textbox {
+.button:hover + .textbox {
   border-color: #38ec79;
 }
 
