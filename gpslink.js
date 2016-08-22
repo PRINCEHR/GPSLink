@@ -23,7 +23,7 @@ var shareLocation = function() {
       frame.setAttribute("sandbox", "allow-forms allow-modals allow-pointer-lock allow-popups allow-same-origin allow-scripts");
       document.querySelector(".frame").appendChild(frame);
       var mapFrame = document.getElementById("frame");
-      mapFrame.src = "/frame/#" + window.location.hash;
+      mapFrame.src = "/GPSLink/frame/#" + window.location.hash;
       locBtn.value = "Share";
     });
   }
@@ -32,7 +32,7 @@ var shareLocation = function() {
 if (hash) {
   // Grab URL Hash
   locVal.value = sb = sa = hash.toString().replace(/#/g,'');
-  mapFrame.src = "/frame/#" + locVal.value;
+  mapFrame.src = "/GPSLink/frame/#" + locVal.value;
 
   // Remove all text before character
   sb = sb.split(",").pop();
@@ -88,7 +88,7 @@ locBtn.onclick = function() {
     frame.setAttribute("sandbox", "allow-forms allow-modals allow-pointer-lock allow-popups allow-same-origin allow-scripts");
     document.querySelector(".frame").appendChild(frame);
     var mapFrame = document.getElementById("frame");
-    mapFrame.src = "/frame/#" + locVal.value.replace(/#/g,'');
+    mapFrame.src = "/GPSLink/frame/#" + locVal.value.replace(/#/g,'');
     locBtn.value = "Share";
   }
 };
