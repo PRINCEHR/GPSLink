@@ -14,7 +14,6 @@ var shareLocation = function() {
     navigator.geolocation.getCurrentPosition(function(position) {
       sa = position.coords.latitude;
       sb = position.coords.longitude;
-      locVal.value = "";
       locVal.value = sa + "," + sb;
       window.location.hash = locVal.value;
 
@@ -77,11 +76,9 @@ locBtn.onclick = function() {
     }
   } else if (this.value === "Locate Me") {
     this.value = "Loading";
-    locVal.value = "";
     locVal.value = window.location.hash.toString().replace(/#/g,'');
     shareLocation();
   } else if (this.value === "Share") {
-    locVal.value = "";
     locVal.value = window.location.href;
   } else if (this.value === "Go To") {
     window.location.hash = locVal.value.replace(/#/g,'');
