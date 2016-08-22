@@ -32,7 +32,7 @@ var shareLocation = function() {
 if (hash) {
   // Grab URL Hash
   locVal.value = sb = sa = hash.toString().replace(/#/g,'');
-  mapFrame.src = "frame.html#" + locVal.value;
+  mapFrame.src = "/frame/#" + locVal.value;
 
   // Remove all text before character
   sb = sb.split(",").pop();
