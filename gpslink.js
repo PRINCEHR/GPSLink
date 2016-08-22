@@ -4,11 +4,6 @@ var sb,sa,sb1,sb2,
     locBtn   = document.querySelector("[data-grab=locbtn]"),
     mapFrame = document.querySelector("[data-call=map]");
 
-/*
-API Key
-AIzaSyDDotKqMh0idkF4ZK0-zgBy0gXZFI9nm0o
-*/
-
 var shareLocation = function() {
   if ('geolocation' in navigator) {
     navigator.geolocation.getCurrentPosition(function(position) {
@@ -92,3 +87,24 @@ locBtn.onclick = function() {
     locBtn.value = "Share";
   }
 };
+
+// Random background image onload
+
+function changeImg(imgNumber) {
+  var myImages = [
+    "background/norway-mountain-sky-blue.jpg",
+    "background/pexels-photo-28424.jpg",
+    "background/pexels-photo-29967.jpg",
+    "background/pexels-photo-50520.jpeg",
+    "background/pexels-photo-52062.jpeg",
+    "background/pexels-photo-70906.jpeg",
+    "background/pexels-photo-80277.png",
+    "background/pexels-photo-132076.jpeg",
+    "background/pexels-photo-140928.jpeg",
+    "background/pexels-photo-141557.jpeg"
+  ];
+  var imgShown = document.body.style.backgroundImage;
+  var newImgNumber = Math.floor(Math.random()*myImages.length);
+  document.body.style.backgroundImage = 'linear-gradient(rgba(0, 173, 255, 0.45), rgba(0, 173, 255, 0.45)), url('+myImages[newImgNumber]+')';
+}
+changeImg();
