@@ -89,7 +89,6 @@ locBtn.onclick = function() {
 };
 
 // Random background image onload
-
 function changeImg(imgNumber) {
   var myImages = [
     "background/norway-mountain-sky-blue.jpg",
@@ -105,6 +104,6 @@ function changeImg(imgNumber) {
   ];
   var imgShown = document.body.style.backgroundImage;
   var newImgNumber = Math.floor(Math.random()*myImages.length);
-  document.body.style.backgroundImage = 'linear-gradient(rgba(0, 173, 255, 0.45), rgba(0, 173, 255, 0.45)), url('+myImages[newImgNumber]+')';
+  document.body.style.backgroundImage = 'linear-gradient(rgba(0, 78, 255, 0.45), rgba(0, 173, 255, 0.45)), url('+myImages[newImgNumber]+')';
 }
 changeImg();
