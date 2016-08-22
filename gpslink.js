@@ -23,7 +23,7 @@ var shareLocation = function() {
       frame.setAttribute("sandbox", "allow-forms allow-modals allow-pointer-lock allow-popups allow-same-origin allow-scripts");
       document.querySelector(".frame").appendChild(frame);
       var mapFrame = document.getElementById("frame");
-      mapFrame.src = "/frame#" + window.location.hash;
+      mapFrame.src = "/frame/#" + window.location.hash;
       locBtn.value = "Share";
     });
   }
@@ -88,7 +88,7 @@ locBtn.onclick = function() {
     frame.setAttribute("sandbox", "allow-forms allow-modals allow-pointer-lock allow-popups allow-same-origin allow-scripts");
     document.querySelector(".frame").appendChild(frame);
     var mapFrame = document.getElementById("frame");
-    mapFrame.src = "/frame#" + locVal.value.replace(/#/g,'');
+    mapFrame.src = "/frame/#" + locVal.value.replace(/#/g,'');
     locBtn.value = "Share";
   }
 };
